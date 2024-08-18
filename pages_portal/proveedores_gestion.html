@@ -283,187 +283,383 @@
         <div class="container-fluid py-4">
 
             <!-- contenido -->
-            <div class="row">
-                <div class="col-md-12">
 
-                    <div class="card">
+            <!DOCTYPE html>
+            <html lang="es">
 
-                        <!-- contenido -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form>
-                            <!-- Información de la Orden -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="numero_orden">Número de Orden</label>
-                                        <input type="text" id="numero_orden" name="numero_orden" class="form-control" readonly value="GENERADO_AUTOMATICAMENTE">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="tipo_orden">Tipo de Orden</label>
-                                        <select id="tipo_orden" name="tipo_orden" class="form-control" required>
-                                            <option value="">Seleccione el tipo de orden</option>
-                                            <option value="Compra">Compra</option>
-                                            <option value="Servicio">Servicio</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fecha_orden">Fecha de Orden</label>
-                                        <input type="date" id="fecha_orden" name="fecha_orden" class="form-control" readonly value="GENERADO_AUTOMATICAMENTE">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="proveedor">Proveedor</label>
-                                        <input type="text" id="proveedor" name="proveedor" placeholder="Ingrese el proveedor" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fecha_atencion">Fecha de Atención</label>
-                                        <input type="date" id="fecha_atencion" name="fecha_atencion" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condicion_pago">Condición de Pago</label>
-                                        <select id="condicion_pago" name="condicion_pago" class="form-control" required>
-                                            <option value="">Seleccione la condición de pago</option>
-                                            <option value="Contado">Contado</option>
-                                            <option value="7 días">7 días</option>
-                                            <option value="15 días">15 días</option>
-                                            <option value="30 días">30 días</option>
-                                            <option value="Otros">Otros</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="monto_total">Monto Total</label>
-                                        <input type="number" id="monto_total" name="monto_total" step="0.01" placeholder="Ingrese el monto total" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fecha_entrega">Fecha de Entrega de Bienes/Servicios</label>
-                                        <input type="date" id="fecha_entrega" name="fecha_entrega" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="documento_orden">Documento de Orden (PDF, obligatorio)</label>
-                                        <input type="file" id="documento_orden" name="documento_orden" accept=".pdf" class="form-control-file" required>
-                                        <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                                    </div>
-                                </div>
-                            </div>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Gestionar Proveedor</title>
+                    
+                <!-- Importar CSS de Bootstrap -->
+                
+                <style>
+                    body {
+                        background-color: #f8f9fe;
+                    }
 
-                            <!-- Confirmación de Términos -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="proveedor_confirmacion">Proveedor</label>
-                                        <input type="text" id="proveedor_confirmacion" name="proveedor_confirmacion" placeholder="Ingrese el proveedor" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fecha_confirmacion">Fecha de Confirmación</label>
-                                        <input type="date" id="fecha_confirmacion" name="fecha_confirmacion" class="form-control" readonly value="GENERADO_AUTOMATICAMENTE">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="aceptacion_terminos" name="aceptacion_terminos" required>
-                                            <label class="form-check-label" for="aceptacion_terminos">
-                                                Acepto los términos y condiciones
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="comentarios_proveedor">Comentarios del Proveedor</label>
-                                        <textarea id="comentarios_proveedor" name="comentarios_proveedor" placeholder="Ingrese sus comentarios (opcional)" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
+                    .custom-title {
+                        color: #ffffff;
+                        font-size: 1.5rem;
+                        margin-bottom: 20px;
+                    }
 
-                            <!-- Botón de Envío -->
-                            <button type="submit" class="btn btn-primary btn-block mt-4">Enviar Orden</button>
-                        </form>
+                    .custom-section {
+                        background-color: #ffffff;
+                        padding: 15px;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        margin-bottom: 20px;
+                    }
+
+                    .custom-section-title {
+                        color: #333333;
+                        font-size: 1.25rem;
+                        margin-bottom: 15px;
+                    }
+
+                    .btn-custom {
+                        margin: 5px;
+                        width: 100%;
+                    }
+
+                    .table td,
+                    .table th {
+                        color: #333333;
+                        font-size: 0.875rem;
+                    }
+
+                    .table th,
+                    .table td {
+                        width: 25%;
+                    }
+
+                    .table .document-link {
+                        color: #5e72e4;
+                        text-decoration: underline;
+                    }
+
+                    .modal-content {
+                        background-color: #ffffff;
+                        border-radius: 0.5rem;
+                    }
+
+                    .modal-header {
+                        background-color: #5e72e4;
+                        color: #ffffff;
+                    }
+
+                    .modal-footer .btn {
+                        border-radius: 0.5rem;
+                    }
+
+                    .modal-body textarea,
+                    .modal-body input {
+                        border-radius: 0.25rem;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <div class="container mt-5">
+                    <!-- Fila para el Título -->
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h1 class="custom-title">Gestionar Proveedor</h1>
+                            <p class="section-description">Revise la información detalladamente, es importante hacerlo para procesos efectivos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila para Detalles del Proveedor y Gestión -->
+                    <div class="row mb-5">
+                        <div class="col-md-12 mb-4">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Proveedor XYZ</h4>
+                                <p><strong>Estado:</strong> En Proceso</p>
+                                <p><strong>Última actualización:</strong> 2024-08-15</p>
+                                <p><strong>Logística:</strong> Juan Pérez</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Seleccione la actividad que desea realizar</h4>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <button class="btn btn-success btn-custom" onclick="aprobarProveedor()">Aprobar
+                                            al proveedor</button>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <button class="btn btn-warning btn-custom" data-toggle="modal"
+                                            data-target="#solicitarCorreccionModal">Solicitar corrección</button>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <button class="btn btn-info btn-custom"
+                                            onclick="solicitarActualizacion()">Solicitar actualización</button>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <button class="btn btn-danger btn-custom" onclick="darDeBaja()">Dar de
+                                            baja</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila para los Datos del Proveedor y Documentación -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Datos del Proveedor</h4>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Razón Social:</th>
+                                            <td>Proveedor XYZ S.A.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>RUC:</th>
+                                            <td>20123456789</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dirección Fiscal:</th>
+                                            <td>Av. Principal 123, Lima, Perú</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Productos/Servicios que Ofrece:</th>
+                                            <td>Servicios de Consultoría</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dirección Web:</th>
+                                            <td><a href="https://www.proveedorxyz.com" target="_blank"
+                                                    class="document-link">www.proveedorxyz.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sector al que Pertenece:</th>
+                                            <td>Consultoría</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Datos de Contacto</h4>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Contacto</th>
+                                            <th>Cargo</th>
+                                            <th>Celular</th>
+                                            <th>Correo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Carlos López</td>
+                                            <td>Gerente</td>
+                                            <td>+51 987654321</td>
+                                            <td>contacto@proveedorxyz.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Información Bancaria</h4>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Banco</th>
+                                            <th>Tipo de Cuenta</th>
+                                            <th>Moneda</th>
+                                            <th>Número de Cuenta</th>
+                                            <th>CCI</th>
+                                            <th>Código Swift</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Banco de Crédito del Perú</td>
+                                            <td>Cuenta Corriente</td>
+                                            <td>Sol</td>
+                                            <td>192-1234567890</td>
+                                            <td>002-192-12345678901234</td>
+                                            <td>BCPPSV</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Información Tributaria</h4>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Agente Retenedor:</th>
+                                            <td>Sí</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Agente de Percepción:</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Renuncia a la Exoneración de IGV:</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Buen Contribuyente:</th>
+                                            <td>Sí</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Afecto a Detracción:</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Afecto a Retención 3% IGV:</th>
+                                            <td>No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Afecto a 10% Renta de 4ta. Categoría:</th>
+                                            <td>Sí</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                            <div class="custom-section">
+                                <h4 class="custom-section-title">Documentación del Proveedor</h4>
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Carta de Presentación:</th>
+                                            <td><a href="path/to/carta-presentacion.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Brochure:</th>
+                                            <td><a href="path/to/brochure.pdf" target="_blank" class="document-link">Ver
+                                                    Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Documento de Identidad de Apoderados:</th>
+                                            <td><a href="path/to/identidad-apoderados.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ficha RUC:</th>
+                                            <td><a href="path/to/ficharuc.pdf" target="_blank" class="document-link">Ver
+                                                    Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Vigencia de Poder:</th>
+                                            <td><a href="path/to/vigencia-poder.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Extracto Bancario:</th>
+                                            <td><a href="path/to/Extracto-bancario.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Reporte de Deudas:</th>
+                                            <td><a href="path/to/reporte-deudas.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Declaración Jurada de Parentesco:</th>
+                                            <td><a href="path/to/djurada.pdf" target="_blank" class="document-link">Ver
+                                                    Documento</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Constancias de Certificaciones:</th>
+                                            <td><a href="path/to/certificados.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        <tr>
+                                            <th>Otros documentos:</th>
+                                            <td><a href="path/to/otros-documentos.pdf" target="_blank"
+                                                    class="document-link">Ver Documento</a></td>
+                                        </tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Modal para Solicitar Corrección -->
+                <div class="modal fade" id="solicitarCorreccionModal" tabindex="-1" role="dialog"
+                    aria-labelledby="solicitarCorreccionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="solicitarCorreccionModalLabel">Escriba las recomendaciones
+                                    para el proveedor</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="solicitarCorreccionForm">
+                                    <div class="form-group">
+                                        <label for="recomendaciones">Recomendaciones:</label>
+                                        <textarea class="form-control" id="recomendaciones" rows="4"
+                                            placeholder="Escriba aquí las recomendaciones..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailProveedor">Correo Electrónico:</label>
+                                        <input type="email" class="form-control" id="emailProveedor"
+                                            value="contacto@proveedorxyz.com" readonly>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-warning" onclick="enviarCorreccion()">Solicitar
+                                    Corrección</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Importar JS de Bootstrap y dependencias -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+                <!-- Scripts personalizados -->
+                <script>
+                    function aprobarProveedor() {
+                        alert('Proveedor aprobado. Notificación enviada por correo.');
+                    }
+
+                    function solicitarActualizacion() {
+                        alert('Solicitud de actualización enviada por correo.');
+                    }
+
+                    function darDeBaja() {
+                        alert('Proveedor dado de baja. Notificación enviada por correo.');
+                    }
+
+                    function enviarCorreccion() {
+                        $('#solicitarCorreccionModal').modal('hide');
+                        alert('Notificación de Solicitud de Corrección de Datos enviada por correo.');
+                    }
+                </script>
+
+            </body>
+
+            </html>
+
+
+
         </div>
-    </div>
-
-
-
-                    </div>
-
-                    <!-- CSS adicional para mejorar el estilo de los campos de archivos -->
-                    <style>
-                        .form-control-file {
-                            border: 1px solid #dcdcdc;
-                            border-radius: 0.375rem;
-                            padding: 0.75rem;
-                            background-color: #ffffff;
-                            margin-bottom: 0.5rem;
-                        }
-
-                        .form-control-file::file-selector-button {
-                            border: 1px solid #007bff;
-                            border-radius: 0.375rem;
-                            padding: 0.5rem 1rem;
-                            background-color: #007bff;
-                            color: #ffffff;
-                            cursor: pointer;
-                            font-size: 0.875rem;
-                            font-weight: 600;
-                        }
-
-                        .form-control-file::file-selector-button:hover {
-                            background-color: #0056b3;
-                        }
-
-                        .btn-primary {
-                            background-color: #007bff;
-                            border-color: #007bff;
-                            border-radius: 0.375rem;
-                        }
-
-                        .btn-primary:hover {
-                            background-color: #0056b3;
-                            border-color: #004085;
-                        }
-                    </style>
-
-
-                </div>
-
-
-            </div>
     </main>
     <div class="fixed-plugin">
         <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">

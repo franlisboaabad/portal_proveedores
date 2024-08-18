@@ -277,184 +277,473 @@
 
       <!-- contenido -->
 
-      <div class="container mt-4">
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <!-- Información Básica -->
-                    <h4 class="mb-4">Información Básica</h4>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="razon_social">Razón Social</label>
-                                <input type="text" id="razon_social" name="razon_social" placeholder="Ingrese la razón social" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="ruc">RUC</label>
-                                <input type="text" id="ruc" name="ruc" placeholder="Ingrese el RUC" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="direccion_fiscal">Dirección Fiscal</label>
-                                <input type="text" id="direccion_fiscal" name="direccion_fiscal" placeholder="Ingrese la dirección fiscal" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese el teléfono" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="correo_electronico">Correo Electrónico</label>
-                                <input type="email" id="correo_electronico" name="correo_electronico" placeholder="Ingrese el correo electrónico" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="contacto_principal">Nombre de Contacto Principal</label>
-                                <input type="text" id="contacto_principal" name="contacto_principal" placeholder="Ingrese el nombre de contacto principal" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="telefono_contacto">Teléfono de Contacto Principal</label>
-                                <input type="tel" id="telefono_contacto" name="telefono_contacto" placeholder="Ingrese el teléfono de contacto" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="productos_servicios">Productos/Servicios que Ofrece</label>
-                                <textarea id="productos_servicios" name="productos_servicios" placeholder="Describa los productos o servicios que ofrece" class="form-control" rows="3" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="direccion_web">Dirección Web</label>
-                                <input type="text" id="direccion_web" name="direccion_web" placeholder="Ingrese la dirección web" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="sector">Sector al que Pertenece</label>
-                                <select id="sector" name="sector" class="form-control" required>
-                                    <option value="">Seleccione el sector</option>
-                                    <option value="Manufactura">Manufactura</option>
-                                    <option value="Servicios">Servicios</option>
-                                    <option value="Comercio">Comercio</option>
-                                    <option value="Tecnología">Tecnología</option>
-                                    <option value="Construcción">Construcción</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="forma_pago">Forma de Pago</label>
-                                <select id="forma_pago" name="forma_pago" class="form-control" required>
-                                    <option value="">Seleccione la forma de pago</option>
-                                    <option value="Transferencia Bancaria">Transferencia Bancaria</option>
-                                    <option value="Cheque">Cheque</option>
-                                    <option value="Efectivo">Efectivo</option>
-                                    <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="banco">Banco</label>
-                                <select id="banco" name="banco" class="form-control" required>
-                                    <option value="">Seleccione el banco</option>
-                                    <option value="Banco de Crédito">Banco de Crédito</option>
-                                    <option value="Interbank">Interbank</option>
-                                    <option value="BBVA">BBVA</option>
-                                    <option value="Scotiabank">Scotiabank</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="cuenta_bancaria">Número de Cuenta Bancaria</label>
-                                <input type="text" id="cuenta_bancaria" name="cuenta_bancaria" placeholder="Ingrese el número de cuenta bancaria" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="observaciones">Observaciones</label>
-                                <textarea id="observaciones" name="observaciones" placeholder="Ingrese cualquier observación adicional" class="form-control" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Carga de Documentos -->
-                    <h4 class="mt-4 mb-4">Documentación de la Empresa</h4>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="carta_presentacion">Carta de Presentación (PDF, obligatorio)</label>
-                                <input type="file" id="carta_presentacion" name="carta_presentacion" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="reporte_deudas">Reporte de Deudas (PDF, obligatorio)</label>
-                                <input type="file" id="reporte_deudas" name="reporte_deudas" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="declaracion_jurada">Declaración Jurada de Parentesco (PDF, obligatorio)</label>
-                                <input type="file" id="declaracion_jurada" name="declaracion_jurada" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="vigencia_poder">Vigencia de Poder (PDF, obligatorio)</label>
-                                <input type="file" id="vigencia_poder" name="vigencia_poder" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="copia_literal">Copia Literal (PDF, obligatorio)</label>
-                                <input type="file" id="copia_literal" name="copia_literal" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="ficha_ruc">Ficha RUC (PDF, obligatorio)</label>
-                                <input type="file" id="ficha_ruc" name="ficha_ruc" accept=".pdf" class="form-control-file" required>
-                                <small class="form-text text-muted">Archivo PDF de hasta 10MB.</small>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Proveedores</title>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <style>
+          .container {
+              margin-top: 2rem;
+          }
+  
+          .card {
+              border-radius: 0.375rem;
+              box-shadow: 0 0.15rem 1.75rem rgba(58, 59, 69, .15);
+              margin-bottom: 1.5rem;
+          }
+  
+          .card-header {
+              background-color: #f8f9fe;
+              border-bottom: 1px solid #e9ecef;
+          }
+  
+          .card-title {
+              font-size: 1.5rem;
+              font-weight: 600;
+              margin-bottom: 0;
+          }
+  
+          .table th,
+          .table td {
+              text-align: center;
+              vertical-align: middle;
+              font-size: 0.75rem;
+          }
+  
+          .table th {
+              font-weight: 600;
+          }
+  
+          .btn-manage {
+              background-color: #5e72e4;
+              color: #fff;
+              border: none;
+              border-radius: 0.375rem;
+              padding: 0.5rem 1rem;
+              cursor: pointer;
+          }
+  
+          .btn-manage:hover {
+              background-color: #4c60e1;
+          }
+  
+          .btn-new {
+              background-color: #28a745;
+              color: #fff;
+              border: none;
+              border-radius: 0.375rem;
+              padding: 0.5rem 1rem;
+              margin-bottom: 1rem;
+              cursor: pointer;
+          }
+  
+          .btn-new:hover {
+              background-color: #218838;
+          }
+  
+          .filter-group {
+              margin-bottom: 1rem;
+          }
+  
+          .filter-group select {
+              width: 100%;
+              padding: 0.375rem 0.75rem;
+              border-radius: 0.375rem;
+              border: 1px solid #ced4da;
+          }
+  
+          .instructions {
+              margin-bottom: 1rem;
+              font-size: 0.875rem;
+          }
+  
+          .status-con-cotizaciones {
+              color: #28a745;
+          }
+  
+          .status-sin-cotizaciones {
+              color: #dc3545;
+          }
+  
+          .status-con-orden {
+              color: #28a745;
+          }
+  
+          .status-sin-orden {
+              color: #dc3545;
+          }
+  
+          .status-con-conformidades {
+              color: #28a745;
+          }
+  
+          .status-sin-conformidades {
+              color: #dc3545;
+          }
+  
+          .status-registrado {
+              color: #28a745;
+          }
+  
+          .status-en-proceso {
+              color: #ffc107;
+          }
+  
+          .status-rechazado {
+              color: #dc3545;
+          }
+  
+          .status-pagado {
+              color: #28a745;
+          }
+  
+          .status-en-proceso-pago {
+              color: #ffc107;
+          }
+  
+          .status-date {
+              font-size: 0.75rem;
+              color: #6c757d;
+          }
+      </style>
+    </head>
+      <body>
+          <div class="container">
+              <h1 class="section-title">Registro de Proveedores</h1>
+              <p class="section-description">Complete la información del proveedor con precisión. La información es crucial para establecer una relación comercial efectiva.</p>
+      
+              <!-- Información del Proveedor -->
+              <div class="card">
+                  <div class="card-header">
+                      <h5 class="mb-0">Información del Proveedor</h5>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="razonSocial">Razón Social:</label>
+                                  <input type="text" class="form-control" id="razonSocial" placeholder="Ingrese la razón social">
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="ruc">RUC:</label>
+                                  <input type="text" class="form-control" id="ruc" placeholder="Ingrese el RUC">
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="direccionFiscal">Dirección Fiscal:</label>
+                                  <input type="text" class="form-control" id="direccionFiscal" placeholder="Ingrese la dirección fiscal">
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="productosServicios">Productos/Servicios que Ofrece:</label>
+                                  <input type="text" class="form-control" id="productosServicios" placeholder="Ingrese productos o servicios">
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="direccionWeb">Dirección Web:</label>
+                                  <input type="text" class="form-control" id="direccionWeb" placeholder="Ingrese la dirección web">
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="sector">Sector:</label>
+                                  <input type="text" class="form-control" id="sector" placeholder="Ingrese el sector">
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+      
+              <!-- Contactos del Proveedor -->
+              <div class="card mt-4">
+                  <div class="card-header">
+                      <h5 class="mb-0">Contactos del Proveedor</h5>
+                  </div>
+                  <div class="card-body">
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>Contacto</th>
+                                  <th>Cargo</th>
+                                  <th>Celular</th>
+                                  <th>Correo</th>
+                              </tr>
+                          </thead>
+                          <tbody id="contactosTableBody">
+                              <!-- Los contactos se agregarán aquí -->
+                          </tbody>
+                      </table>
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarContacto">Agregar Contacto</button>
+                  </div>
+              </div>
+      
+              <!-- Información Bancaria -->
+              <div class="card mt-4">
+                  <div class="card-header">
+                      <h5 class="mb-0">Información Bancaria</h5>
+                  </div>
+                  <div class="card-body">
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>Banco</th>
+                                  <th>Tipo de Cuenta</th>
+                                  <th>Tipo de Moneda</th>
+                                  <th>Número de Cuenta</th>
+                                  <th>CCI</th>
+                                  <th>Código SWIFT</th>
+                              </tr>
+                          </thead>
+                          <tbody id="bancosTableBody">
+                              <!-- Las cuentas bancarias se agregarán aquí -->
+                          </tbody>
+                      </table>
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCuenta">Agregar Cuenta Bancaria</button>
+                  </div>
+              </div>
+      
+              <!-- Información Tributaria -->
+              <div class="card mt-4">
+                  <div class="card-header">
+                      <h5 class="mb-0">Información Tributaria</h5>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <label for="agenteRetenedor">Agente Retenedor:</label>
+                                  <select class="form-control" id="agenteRetenedor">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <label for="agentePercepcion">Agente de Percepción:</label>
+                                  <select class="form-control" id="agentePercepcion">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <label for="renunciaExoneracion">Renuncia a la Exoneración de IGV:</label>
+                                  <select class="form-control" id="renunciaExoneracion">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <label for="buenContribuyente">Buen Contribuyente:</label>
+                                  <select class="form-control" id="buenContribuyente">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <label for="afectoDetraccion">Afecto a Detracción:</label>
+                                  <select class="form-control" id="afectoDetraccion">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <label for="afectoRetencion">Afecto a Retención 3% de IGV:</label>
+                                  <select class="form-control" id="afectoRetencion">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <label for="afectoRenta">Afecto a 10% Renta de 4ta. Categoría:</label>
+                                  <select class="form-control" id="afectoRenta">
+                                      <option>Sí</option>
+                                      <option>No</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+      
+              <!-- Documentos de la Empresa -->
+              <div class="card mt-4">
+                  <div class="card-header">
+                      <h5 class="mb-0">Documentos de la Empresa</h5>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="cartaPresentacion">
+                                      <label class="custom-file-label" for="cartaPresentacion">Carta de Presentación</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="brochure">
+                                      <label class="custom-file-label" for="brochure">Brochure de Empresa</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="documentoIdentidad">
+                                      <label class="custom-file-label" for="documentoIdentidad">Documento de Identidad de Apoderados</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="fichaRuc">
+                                      <label class="custom-file-label" for="fichaRuc">Ficha RUC</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="vigenciaPoderes">
+                                      <label class="custom-file-label" for="vigenciaPoderes">Vigencia de Poderes</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="ExtractoBancario">
+                                      <label class="custom-file-label" for="ExtractoBancario">Extracto Bancario</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="reporteDeudas">
+                                      <label class="custom-file-label" for="reporteDeudas">Reporte de Deudas</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="declaracionJurada">
+                                      <label class="custom-file-label" for="declaracionJurada">Declaración Jurada de Parentesco</label>
+                                  </div>
+                              </div>
+                              <div class="form-group col-md-4">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="constanciasCertificaciones">
+                                      <label class="custom-file-label" for="constanciasCertificaciones">Constancias de Certificaciones</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="otrosDocumentos">
+                                  <label class="custom-file-label" for="otrosDocumentos">Otros Documentos</label>
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Enviar</button>
+                      </form>
+                  </div>
+              </div>
+      
+              <!-- Modal para Agregar Contacto -->
+              <div class="modal fade" id="modalAgregarContacto" tabindex="-1" role="dialog" aria-labelledby="modalAgregarContactoLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="modalAgregarContactoLabel">Agregar Contacto</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                      <label for="nombreContacto">Nombre:</label>
+                                      <input type="text" class="form-control" id="nombreContacto" placeholder="Ingrese nombre del contacto">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="cargoContacto">Cargo:</label>
+                                      <input type="text" class="form-control" id="cargoContacto" placeholder="Ingrese cargo del contacto">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="celularContacto">Celular:</label>
+                                      <input type="text" class="form-control" id="celularContacto" placeholder="Ingrese celular del contacto">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="correoContacto">Correo:</label>
+                                      <input type="email" class="form-control" id="correoContacto" placeholder="Ingrese correo del contacto">
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary">Guardar Contacto</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Modal para Agregar Cuenta Bancaria -->
+              <div class="modal fade" id="modalAgregarCuenta" tabindex="-1" role="dialog" aria-labelledby="modalAgregarCuentaLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="modalAgregarCuentaLabel">Agregar Cuenta Bancaria</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                      <label for="banco">Banco:</label>
+                                      <input type="text" class="form-control" id="banco" placeholder="Ingrese nombre del banco">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="tipoCuenta">Tipo de Cuenta:</label>
+                                      <input type="text" class="form-control" id="tipoCuenta" placeholder="Ingrese tipo de cuenta">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="tipoMoneda">Tipo de Moneda:</label>
+                                      <input type="text" class="form-control" id="tipoMoneda" placeholder="Ingrese tipo de moneda">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="numeroCuenta">Número de Cuenta:</label>
+                                      <input type="text" class="form-control" id="numeroCuenta" placeholder="Ingrese número de cuenta">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="cci">CCI:</label>
+                                      <input type="text" class="form-control" id="cci" placeholder="Ingrese CCI">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="codigoSwift">Código SWIFT:</label>
+                                      <input type="text" class="form-control" id="codigoSwift" placeholder="Ingrese código SWIFT">
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary">Guardar Cuenta</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </body>
+      </html>
+      
+      
 
+      </div>
   </main>
   <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
