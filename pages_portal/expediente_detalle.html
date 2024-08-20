@@ -1,17 +1,3 @@
-<!--
-=========================================================
-* Argon Dashboard 2 - v2.0.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +19,133 @@
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+
+  <style>
+    .container {
+      margin-top: 2rem;
+    }
+
+    .card {
+      border-radius: 0.375rem;
+      box-shadow: 0 0.15rem 1.75rem rgba(58, 59, 69, .15);
+      margin-bottom: 1.5rem;
+    }
+
+    .card-header {
+      background-color: #f8f9fe;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .table th,
+    .table td {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.75rem;
+    }
+
+    .table th {
+      font-weight: 600;
+    }
+
+    .btn-manage {
+      background-color: #5e72e4;
+      color: #fff;
+      border: none;
+      border-radius: 0.375rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .btn-manage:hover {
+      background-color: #4c60e1;
+    }
+
+    .btn-new {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 0.375rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .btn-new:hover {
+      background-color: #218838;
+    }
+
+    .filter-group {
+      margin-bottom: 1rem;
+    }
+
+    .filter-group select {
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      border-radius: 0.375rem;
+      border: 1px solid #ced4da;
+    }
+
+    .instructions {
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .status-con-cotizaciones {
+      color: #28a745;
+    }
+
+    .status-sin-cotizaciones {
+      color: #dc3545;
+    }
+
+    .status-con-orden {
+      color: #28a745;
+    }
+
+    .status-sin-orden {
+      color: #dc3545;
+    }
+
+    .status-con-conformidades {
+      color: #28a745;
+    }
+
+    .status-sin-conformidades {
+      color: #dc3545;
+    }
+
+    .status-registrado {
+      color: #28a745;
+    }
+
+    .status-en-proceso {
+      color: #ffc107;
+    }
+
+    .status-rechazado {
+      color: #dc3545;
+    }
+
+    .status-pagado {
+      color: #28a745;
+    }
+
+    .status-en-proceso-pago {
+      color: #ffc107;
+    }
+
+    .status-date {
+      font-size: 0.75rem;
+      color: #6c757d;
+    }
+  </style>
+
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -273,1149 +386,1061 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4">
-
-              <!-- contenido -->
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Lista de Atenciones</title>
-                <style>
-                    .container {
-                        margin-top: 2rem;
-                    }
-            
-                    .card {
-                        border-radius: 0.375rem;
-                        box-shadow: 0 0.15rem 1.75rem rgba(58, 59, 69, .15);
-                        margin-bottom: 1.5rem;
-                    }
-            
-                    .card-header {
-                        background-color: #f8f9fe;
-                        border-bottom: 1px solid #e9ecef;
-                    }
-            
-                    .card-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        margin-bottom: 0;
-                    }
-            
-                    .table th,
-                    .table td {
-                        text-align: center;
-                        vertical-align: middle;
-                        font-size: 0.75rem;
-                    }
-            
-                    .table th {
-                        font-weight: 600;
-                    }
-            
-                    .btn-manage {
-                        background-color: #5e72e4;
-                        color: #fff;
-                        border: none;
-                        border-radius: 0.375rem;
-                        padding: 0.5rem 1rem;
-                        cursor: pointer;
-                    }
-            
-                    .btn-manage:hover {
-                        background-color: #4c60e1;
-                    }
-            
-                    .btn-new {
-                        background-color: #28a745;
-                        color: #fff;
-                        border: none;
-                        border-radius: 0.375rem;
-                        padding: 0.5rem 1rem;
-                        margin-bottom: 1rem;
-                        cursor: pointer;
-                    }
-            
-                    .btn-new:hover {
-                        background-color: #218838;
-                    }
-            
-                    .filter-group {
-                        margin-bottom: 1rem;
-                    }
-            
-                    .filter-group select {
-                        width: 100%;
-                        padding: 0.375rem 0.75rem;
-                        border-radius: 0.375rem;
-                        border: 1px solid #ced4da;
-                    }
-            
-                    .instructions {
-                        margin-bottom: 1rem;
-                        font-size: 0.875rem;
-                    }
-            
-                    .status-con-cotizaciones {
-                        color: #28a745;
-                    }
-            
-                    .status-sin-cotizaciones {
-                        color: #dc3545;
-                    }
-            
-                    .status-con-orden {
-                        color: #28a745;
-                    }
-            
-                    .status-sin-orden {
-                        color: #dc3545;
-                    }
-            
-                    .status-con-conformidades {
-                        color: #28a745;
-                    }
-            
-                    .status-sin-conformidades {
-                        color: #dc3545;
-                    }
-            
-                    .status-registrado {
-                        color: #28a745;
-                    }
-            
-                    .status-en-proceso {
-                        color: #ffc107;
-                    }
-            
-                    .status-rechazado {
-                        color: #dc3545;
-                    }
-            
-                    .status-pagado {
-                        color: #28a745;
-                    }
-            
-                    .status-en-proceso-pago {
-                        color: #ffc107;
-                    }
-            
-                    .status-date {
-                        font-size: 0.75rem;
-                        color: #6c757d;
-                    }
-                </style>
-            </head>
 
     <!-- SOLICITUD DE PEDIDO -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
 
     <div class="container">
       <h1 class="section-title">Gestión de Atenciones</h1>
-      <p class="section-description">Complete la información con precisión. La información es crucial para procesos efectivos.</p>
-<body>
-    <div class="container">
+      <p class="section-description">Complete la información con precisión. La información es crucial para procesos
+        efectivos.</p>
+
+
         <!-- Título de Solicitud de Pedido -->
-        <div class="card pb-5">
+        <div class="card">
           <div class="card-header">
             <h5 class="card-title">Solicitud de Pedido</h5>
-             <div class="card-body">
-                      
-            <!-- Botón para Nueva Solicitud de Pedido -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSolicitud">Nueva Solicitud de Pedido</button>
-            
-            <!-- Tabla de Solicitudes de Pedido -->
-            <div>
           </div>
-        </div>
-      
-        <div class="table-responsive">
-          
-            <table class="table table-striped table-bordered">
+          <div class="card-body">
+
+            <!-- Botón para Nueva Solicitud de Pedido -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSolicitud">Nueva
+              Solicitud de Pedido</button>
+
+            <!-- Tabla de Solicitudes de Pedido -->
+
+            <div class="table-responsive">
+
+              <table class="table table-striped table-bordered">
                 <thead>
-                    <tr>
-                        <th>Fecha del Pedido</th>
-                        <th>Área Usuaria</th>
-                        <th>Usuario Solicitante</th>
-                        <th>Tipo de Pedido</th>
-                        <th>Número de Pedido</th>
-                        <th>Descripción/Observaciones</th>
-                        <th>Archivo PDF</th>
-                    </tr>
+                  <tr>
+                    <th>Fecha del Pedido</th>
+                    <th>Área Usuaria</th>
+                    <th>Usuario Solicitante</th>
+                    <th>Tipo de Pedido</th>
+                    <th>Número de Pedido</th>
+                    <th>Descripción/Observaciones</th>
+                    <th>Archivo PDF</th>
+                  </tr>
                 </thead>
                 <tbody id="tablaSolicitudes">
-                    <tr>
-                        <td>16/08/2024</td>
-                        <td>Logística</td>
-                        <td>Juan Pérez</td>
-                        <td>Compra</td>
-                        <td>12345</td>
-                        <td>Compra de materiales de oficina.</td>
-                        <td><a href="path/to/example.pdf" class="pdf-link" target="_blank">Ver</a></td>
-                    </tr>
-                    
+                  <tr>
+                    <td>16/08/2024</td>
+                    <td>Logística</td>
+                    <td>Juan Pérez</td>
+                    <td>Compra</td>
+                    <td>12345</td>
+                    <td>Compra de materiales de oficina.</td>
+                    <td><a href="path/to/example.pdf" class="pdf-link" target="_blank">Ver</a></td>
+                  </tr>
+
                 </tbody>
-            </table>
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCotizacion">Solicitar Cotización</button>
+              </table>
+              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCotizacion">Solicitar Cotización</button>
+            </div>
+            <!-- Botón para enviar solicitud de cotización (solo para logística) -->
+          </div>
         </div>
 
-        <!-- Botón para enviar solicitud de cotización (solo para logística) -->
+        <!-- cotizaciones -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Cotizaciones</h5>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-manage" data-bs-toggle="modal" data-bs-target="#modalSubirCotizacion">Subir
+              Cotización</button>
+
+              <!-- Tabla de Cotizaciones -->
+              <table class="table table-bordered table-hover mt-4">
+                <thead class="table-header">
+                  <tr>
+                    <th>Fecha de Carga</th>
+                    <th>Proveedor</th>
+                    <th>RUC</th>
+                    <th>Monto</th>
+                    <th>Enlace Información Técnica</th>
+                    <th>Propuesta PDF</th>
+                    <th>Seleccionar Propuesta</th>
+                  </tr>
+                </thead>
+                <tbody id="cotizacionTableBody">
+                  <!-- Datos de ejemplo -->
+                  <tr>
+                    <td>2024-08-10</td>
+                    <td>Proveedor A</td>
+                    <td>12345678901</td>
+                    <td>S/. 10,000</td>
+                    <td><a href="https://example.com/informacion_tecnica_A" target="_blank">Ver Enlace</a></td>
+                    <td><a href="https://example.com/propuesta_A.pdf" target="_blank">Ver PDF</a></td>
+                    <td><button class="btn btn-outline-dark">Seleccionar</button></td>
+                  </tr>
+                  <tr>
+                    <td>2024-08-12</td>
+                    <td>Proveedor B</td>
+                    <td>09876543210</td>
+                    <td>S/. 12,500</td>
+                    <td><a href="https://example.com/informacion_tecnica_B" target="_blank">Ver Enlace</a></td>
+                    <td><a href="https://example.com/propuesta_B.pdf" target="_blank">Ver PDF</a></td>
+                    <td><button class="btn btn-outline-dark">Seleccionar</button></td>
+                  </tr>
+                  <tr>
+                    <td>2024-08-15</td>
+                    <td>Proveedor C</td>
+                    <td>10203040506</td>
+                    <td>S/. 9,800</td>
+                    <td><a href="https://example.com/informacion_tecnica_C" target="_blank">Ver Enlace</a></td>
+                    <td><a href="https://example.com/propuesta_C.pdf" target="_blank">Ver PDF</a></td>
+                    <td><button class="btn btn-outline-dark">Seleccionar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-success">Guardar</button>
+          </div>
+        </div>
+
+        <!-- ordenes -->
+         <div class="card">
+          <div class="card-header">
+             <!-- Título de la sección -->
+          <h3>Órdenes</h3>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-start mb-3">
+              <button class="btn btn-manage" id="btnOrdenConCotizacion" data-bs-toggle="modal"
+                data-bs-target="#modalOrdenConCotizacion">Orden con Cotización</button>
+              <button class="btn btn-dark" id="btnCargarOrden" data-bs-toggle="modal"
+                data-bs-target="#modalCargarOrden">Generar desde Cero</button>
+          </div>
+
+          <!-- Tabla de Órdenes -->
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Fecha de Orden</th>
+                <th>Proveedor</th>
+                <th>Monto</th>
+                <th>Fecha de Envío</th>
+                <th>Fecha de Aceptación</th>
+                <th>Fecha de Atención</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-08-15</td>
+                <td>Proveedor A</td>
+                <td>$1500</td>
+                <td>2024-08-16</td>
+                <td>2024-08-17</td>
+                <td>2024-08-20</td>
+                <td><a href="documento.pdf" class="btn btn-blue" target="_blank">Ver</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+         </div>
+
+         <!-- conformiades -->
+         <div class="card">
+          <div class="card-header">
+             <!-- Título de la sección -->
+            <h3>Conformidades</h3>
+          </div>
+          <div class="card-body">
+            <!-- Botón para generar conformidad -->
+          <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalGenerarConformidad">Generar
+              Conformidad</button>
+          </div>
+
+            <!-- Tabla de Conformidades -->
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Fecha de Emisión</th>
+                  <th>Generado por</th>
+                  <th>Porcentaje de Conformidad</th>
+                  <th>Calificación</th>
+                  <th>PDF</th>
+                  <th>Enviar Conformidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Datos de ejemplo -->
+                <tr>
+                  <td>2024-08-10</td>
+                  <td>Juan Perez</td>
+                  <td>25%</td>
+                  <td>4.20</td>
+                  <td><a href="conformidad.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
+                  <td><button class="btn btn-info" disabled>Enviada</button></td>
+                </tr>
+                <tr>
+                  <td>2024-08-17</td>
+                  <td>Juan Perez</td>
+                  <td>50%</td>
+                  <td>3.67</td>
+                  <td><a href="conformidad.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
+                  <td><button class="btn btn-info">Enviar Conformidad</button></td>
+                </tr>
+              </tbody>
+            </table>
+
+            
+          </div>
+         </div>
+
+         <!-- documentos tributarios -->
+         <div class="card">
+          <div class="card-header">
+            <h3>Documentos Tributarios</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th>Tipo de Documento</th>
+                    <th>Nro de Documento</th>
+                    <th>Ver PDF</th>
+                    <th>Fecha de Envío</th>
+                    <th>Fecha de Registro</th>
+                    <th>Fecha de Contabilización</th>
+                    <th>Mesa de Partes</th>
+                    <th>Contabilidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Datos de ejemplo -->
+                  <tr>
+                    <td>Factura</td>
+                    <td>12345</td>
+                    <td><a href="documento1.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
+                    <td>2024-08-16</td>
+                    <td>2024-08-17</td>
+                    <td>2024-08-18</td>
+                    <td>
+                      <button class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#modalAprobarMesaPartes">Aprobado</button>
+                      <button class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#modalRechazarMesaPartes">Rechazado</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#modalAprobarContabilidad">Aprobado</button>
+                      <button class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#modalRechazarContabilidad">Rechazado</button>
+                    </td>
+                  </tr>
+                  <!-- Más filas según sea necesario -->
+                </tbody>
+              </table>
+            </div>
         
-      
-      </div>
+          </div>
+         </div>
+     
+         <!-- pagos -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Pagos</h3>
+            </div>
+            <div class="card-body">
+               <!-- Botón para Registrar Pagos -->
+    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalRegistrarPago">Registrar Pagos</button>
+
+    <!-- Tabla de Pagos con contenedor responsive -->
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Fecha de Abono</th>
+            <th>Monto Abonado</th>
+            <th>Constancia</th>
+            <th>Gestionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Datos de ejemplo -->
+          <tr>
+            <td>2024-08-16</td>
+            <td>S/ 500.00</td>
+            <td><a href="constancia1.pdf" class="btn btn-blue" target="_blank">Ver Archivo</a></td>
+            <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalRegistrarPago"
+                data-fecha="2024-08-16" data-monto="500.00" data-archivo="constancia1.pdf">Editar</button></td>
+          </tr>
+          <!-- Más filas según sea necesario -->
+        </tbody>
+      </table>
+    </div>
+            </div>
+          </div>
+
+    </div>
+
+
+
+    <!-- MODALES -->
+
 
     <!-- Modal para Nueva Solicitud de Pedido -->
     <div class="modal fade" id="modalSolicitud" tabindex="-1" aria-labelledby="modalSolicitudLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalSolicitudLabel">Nueva Solicitud de Pedido</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="formSolicitud">
-                        <div class="mb-3">
-                            <label for="tipoPedido" class="form-label">Tipo de Pedido</label>
-                            <select class="form-select" id="tipoPedido" required>
-                                <option value="compra">Compra</option>
-                                <option value="servicio">Servicio</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="numeroPedido" class="form-label">Número de Pedido</label>
-                            <input type="text" class="form-control" id="numeroPedido" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcionPedido" class="form-label">Descripción/Observaciones</label>
-                            <textarea class="form-control" id="descripcionPedido" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="archivoPDF" class="form-label">Subir Archivo PDF</label>
-                            <input type="file" class="form-control" id="archivoPDF" accept=".pdf" required>
-                        </div>
-                        <button type="button" class="btn btn-custom" id="guardarSolicitud">Guardar Solicitud</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para Solicitar Cotización -->
-    <div class="modal fade" id="modalCotizacion" tabindex="-1" aria-labelledby="modalCotizacionLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCotizacionLabel">Solicitar Cotización</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="formCotizacion">
-                        <div class="mb-3">
-                            <label for="emailProveedores" class="form-label">Correo Electrónico de Proveedores</label>
-                            <textarea class="form-control" id="emailProveedores" rows="3" placeholder="Ingrese los correos electrónicos separados por coma" required></textarea>
-                        </div>
-                        <button type="button" class="btn btn-manage" id="enviarCotizacion">Enviar Solicitud</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-
-    <script>
-        $(document).ready(function () {
-            // Manejo del formulario de solicitud
-            $('#guardarSolicitud').click(function () {
-                var tipoPedido = $('#tipoPedido').val();
-                var numeroPedido = $('#numeroPedido').val();
-                var descripcionPedido = $('#descripcionPedido').val();
-                var archivoPDF = $('#archivoPDF').val().split('\\').pop();
-
-                // Validar campos antes de agregar la solicitud
-                if (tipoPedido && numeroPedido && descripcionPedido && archivoPDF) {
-                    var fechaPedido = new Date().toLocaleDateString();
-                    var usuario = "Nombre Usuario"; // Cambia esto por el nombre del usuario actual
-                    var areaUsuaria = "Área Usuaria"; // Cambia esto por el área usuaria actual
-
-                    $('#tablaSolicitudes').append(
-                        `<tr>
-                            <td>${fechaPedido}</td>
-                            <td>${areaUsuaria}</td>
-                            <td>${usuario}</td>
-                            <td>${tipoPedido}</td>
-                            <td>${numeroPedido}</td>
-                            <td>${descripcionPedido}</td>
-                            <td><a href="path/to/${archivoPDF}" class="pdf-link" target="_blank">Ver</a></td>
-                        </tr>`
-                    );
-
-                    // Cerrar el modal y resetear el formulario
-                    $('#modalSolicitud').modal('hide');
-                    $('#formSolicitud')[0].reset();
-                }
-            });
-
-            // Manejo del formulario de cotización
-            $('#enviarCotizacion').click(function () {
-                var emails = $('#emailProveedores').val().split(',');
-
-                // Validar correos electrónicos
-                if (emails.length > 0) {
-                    alert(`Correos electrónicos enviados a: ${emails.join(', ')}`);
-
-                    // Cerrar el modal y resetear el formulario
-                    $('#modalCotizacion').modal('hide');
-                    $('#formCotizacion')[0].reset();
-                }
-            });
-        });
-    </script>
-</body>
-
-          <!-- COTIZACIONES -->
-
-        <!-- Título de Solicitud de Pedido -->
-
-          <body>
-            <div class="card">
-              <div class="card-header"</div>
-                <h5 class="card-title">Cotizaciones</h3>
-              
-                <button class="btn btn-manage" data-bs-toggle="modal" data-bs-target="#modalSubirCotizacion">Subir Cotización</button>
-                  
-                <!-- Tabla de Cotizaciones -->
-                <table class="table table-bordered table-hover mt-4">
-                    <thead class="table-header">
-                        <tr>
-                            <th>Fecha de Carga</th>
-                            <th>Proveedor</th>
-                            <th>RUC</th>
-                            <th>Monto</th>
-                            <th>Enlace Información Técnica</th>
-                            <th>Propuesta PDF</th>
-                            <th>Seleccionar Propuesta</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cotizacionTableBody">
-                        <!-- Datos de ejemplo -->
-                        <tr>
-                            <td>2024-08-10</td>
-                            <td>Proveedor A</td>
-                            <td>12345678901</td>
-                            <td>S/. 10,000</td>
-                            <td><a href="https://example.com/informacion_tecnica_A" target="_blank">Ver Enlace</a></td>
-                            <td><a href="https://example.com/propuesta_A.pdf" target="_blank">Ver PDF</a></td>
-                            <td><button class="btn btn-outline-dark">Seleccionar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2024-08-12</td>
-                            <td>Proveedor B</td>
-                            <td>09876543210</td>
-                            <td>S/. 12,500</td>
-                            <td><a href="https://example.com/informacion_tecnica_B" target="_blank">Ver Enlace</a></td>
-                            <td><a href="https://example.com/propuesta_B.pdf" target="_blank">Ver PDF</a></td>
-                            <td><button class="btn btn-outline-dark">Seleccionar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2024-08-15</td>
-                            <td>Proveedor C</td>
-                            <td>10203040506</td>
-                            <td>S/. 9,800</td>
-                            <td><a href="https://example.com/informacion_tecnica_C" target="_blank">Ver Enlace</a></td>
-                            <td><a href="https://example.com/propuesta_C.pdf" target="_blank">Ver PDF</a></td>
-                            <td><button class="btn btn-outline-dark">Seleccionar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="btn btn-success">Guardar</button>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalSolicitudLabel">Nueva Solicitud de Pedido</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formSolicitud">
+              <div class="mb-3">
+                <label for="tipoPedido" class="form-label">Tipo de Pedido</label>
+                <select class="form-select" id="tipoPedido" required>
+                  <option value="compra">Compra</option>
+                  <option value="servicio">Servicio</option>
+                </select>
               </div>
-            </div>
-        
-            <!-- Modal para Subir Cotización -->
-            <div class="modal fade" id="modalSubirCotizacion" tabindex="-1" aria-labelledby="modalSubirCotizacionLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalSubirCotizacionLabel">Subir Cotización</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="formSubirCotizacion">
-                                <div class="form-group">
-                                    <label for="nombreProveedor">Nombre del Proveedor</label>
-                                    <input type="text" class="form-control" id="nombreProveedor" placeholder="Nombre del proveedor" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="rucProveedor">RUC del Proveedor</label>
-                                    <input type="text" class="form-control" id="rucProveedor" placeholder="RUC del proveedor" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="montoCotizacion">Monto de la Cotización</label>
-                                    <input type="text" class="form-control" id="montoCotizacion" placeholder="Monto de la cotización" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="informacionTecnica">Enlace Información Técnica</label>
-                                    <input type="text" class="form-control" id="informacionTecnica" placeholder="Enlace o archivo zip">
-                                </div>
-                                <div class="form-group">
-                                    <label for="propuestaPDF">Propuesta en PDF</label>
-                                    <input type="file" class="form-control-file" id="propuestaPDF" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-blue" id="btnSubirCotizacion">Subir Cotización</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <script>
-                document.getElementById('btnSubirCotizacion').addEventListener('click', function () {
-                    // Obtener datos del formulario
-                    var nombreProveedor = document.getElementById('nombreProveedor').value;
-                    var rucProveedor = document.getElementById('rucProveedor').value;
-                    var montoCotizacion = document.getElementById('montoCotizacion').value;
-                    var informacionTecnica = document.getElementById('informacionTecnica').value;
-                    var propuestaPDF = document.getElementById('propuestaPDF').files[0];
-        
-                    // Validar campos obligatorios
-                    if (!nombreProveedor || !rucProveedor || !montoCotizacion || !propuestaPDF) {
-                        alert('Por favor, complete todos los campos obligatorios.');
-                        return;
-                    }
-        
-                    // Crear una nueva fila en la tabla
-                    var tableBody = document.getElementById('cotizacionTableBody');
-                    var newRow = document.createElement('tr');
-        
-                    var currentDate = new Date().toISOString().split('T')[0]; // Fecha en formato YYYY-MM-DD
-        
-                    newRow.innerHTML = `
-                        <td>${currentDate}</td>
-                        <td>${nombreProveedor}</td>
-                        <td>${rucProveedor}</td>
-                        <td>S/. ${montoCotizacion}</td>
-                        <td><a href="${informacionTecnica}" target="_blank">Ver Enlace</a></td>
-                        <td><a href="#" target="_blank">Ver PDF</a></td>
-                        <td><button class="btn btn-blue">Seleccionar</button></td>
-                    `;
-        
-                    tableBody.appendChild(newRow);
-        
-                    // Cerrar el modal y limpiar el formulario
-                    var modal = bootstrap.Modal.getInstance(document.getElementById('modalSubirCotizacion'));
-                    modal.hide();
-                    document.getElementById('formSubirCotizacion').reset();
-                });
-            </script>
-        </body>
-          
-          <!-- ORDEN DE COMPRA -->
-
-          <body>
-            <div class="container mt-4">
-                <!-- Título de la sección -->
-                <h3>Órdenes</h3>
-        
-                <!-- Botones de acción -->
-                <div class="d-flex justify-content-end mb-3">
-                    <button class="btn btn-manage" id="btnOrdenConCotizacion" data-bs-toggle="modal" data-bs-target="#modalOrdenConCotizacion">Orden con Cotización</button>
-                    <button class="btn btn-dark" id="btnCargarOrden" data-bs-toggle="modal" data-bs-target="#modalCargarOrden">Generar desde Cero</button>
-                </div>
-        
-                <!-- Tabla de Órdenes -->
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Fecha de Orden</th>
-                            <th>Proveedor</th>
-                            <th>Monto</th>
-                            <th>Fecha de Envío</th>
-                            <th>Fecha de Aceptación</th>
-                            <th>Fecha de Atención</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2024-08-15</td>
-                            <td>Proveedor A</td>
-                            <td>$1500</td>
-                            <td>2024-08-16</td>
-                            <td>2024-08-17</td>
-                            <td>2024-08-20</td>
-                            <td><a href="documento.pdf" class="btn btn-blue" target="_blank">Ver</a></td>
-                        </tr>
-                      </tbody>
-                </table>
-            </div>
-        
-            <!-- Modal para Orden con Cotización -->
-            <div class="modal fade" id="modalOrdenConCotizacion" tabindex="-1" aria-labelledby="modalOrdenConCotizacionLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalOrdenConCotizacionLabel">Orden con Cotización</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="tipoOrden" class="form-label">Tipo de Orden</label>
-                                    <select id="tipoOrden" class="form-select">
-                                        <option value="compra">Compra</option>
-                                        <option value="servicio">Servicio</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="pdfOrden" class="form-label">Archivo PDF de la Orden</label>
-                                    <input type="file" id="pdfOrden" class="form-control" accept=".pdf">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="detallesOrden" class="form-label">Detalles Adicionales</label>
-                                    <textarea id="detallesOrden" class="form-control" rows="3"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="condicionPago" class="form-label">Condición de Pago</label>
-                                    <input type="text" id="condicionPago" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="fechaAtencion" class="form-label">Fecha de Atención Deseada</label>
-                                    <input type="date" id="fechaAtencion" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correoProveedor" class="form-label">Correo del Proveedor</label>
-                                    <input type="email" id="correoProveedor" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="nombreSolicitante" class="form-label">Nombre del Solicitante</label>
-                                    <input type="text" id="nombreSolicitante" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correoSolicitante" class="form-label">Correo del Solicitante</label>
-                                    <input type="email" id="correoSolicitante" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correosNotificar" class="form-label">Correos para Notificar</label>
-                                    <input type="text" id="correosNotificar" class="form-control">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-blue">Enviar Orden</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Modal para Cargar Orden -->
-            <div class="modal fade" id="modalCargarOrden" tabindex="-1" aria-labelledby="modalCargarOrdenLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalCargarOrdenLabel">Cargar Orden</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="tipoPedido" class="form-label">Tipo de Pedido</label>
-                                    <select id="tipoPedido" class="form-select">
-                                        <option value="compra">Compra</option>
-                                        <option value="servicio">Servicio</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="numeroPedido" class="form-label">Número de Pedido</label>
-                                    <input type="text" id="numeroPedido" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="areaUsuaria" class="form-label">Área Usuaria</label>
-                                    <input type="text" id="areaUsuaria" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="usuarioSolicitante" class="form-label">Nombre del Usuario Solicitante</label>
-                                    <input type="text" id="usuarioSolicitante" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="nombreProveedor" class="form-label">Nombre del Proveedor</label>
-                                    <input type="text" id="nombreProveedor" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="rucProveedor" class="form-label">RUC del Proveedor</label>
-                                    <input type="text" id="rucProveedor" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="montoCotizacion" class="form-label">Monto de la Cotización</label>
-                                    <input type="text" id="montoCotizacion" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="archivoZip" class="form-label">Archivo ZIP de la Propuesta Técnica</label>
-                                    <input type="file" id="archivoZip" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="pdfPropuesta" class="form-label">Cotización en PDF</label>
-                                    <input type="file" id="pdfPropuesta" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                  <label for="pdfOrden" class="form-label">Cargar la Orden de Compra</label>
-                                  <input type="file" id="pdfOrden" class="form-control" accept=".pdf">
-                              </div>
-                                
-                                <div class="mb-3">
-                                    <label for="detallesOrden" class="form-label">Detalles Adicionales</label>
-                                    <textarea id="detallesOrden" class="form-control" rows="3"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="condicionPago" class="form-label">Condición de Pago</label>
-                                    <input type="text" id="condicionPago" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="fechaAtencion" class="form-label">Fecha de Atención Deseada</label>
-                                    <input type="date" id="fechaAtencion" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correoProveedor" class="form-label">Correo del Proveedor</label>
-                                    <input type="email" id="correoProveedor" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correosNotificar" class="form-label">Correos para Notificar</label>
-                                    <input type="text" id="correosNotificar" class="form-control">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-blue">Enviar Orden</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        </body>
-          
-          <!-- CONFORMIDADES -->
-
-          
-            <div class="container mt-4">
-                <!-- Título de la sección -->
-                <h3>Conformidades</h3>
-        
-                <!-- Botón para generar conformidad -->
-                <div class="d-flex justify-content-end mb-3">
-                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalGenerarConformidad">Generar Conformidad</button>
-                </div>
-        
-                <!-- Tabla de Conformidades -->
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Fecha de Emisión</th>
-                            <th>Generado por</th>
-                            <th>Porcentaje de Conformidad</th>
-                            <th>Calificación</th>
-                            <th>PDF</th>
-                            <th>Enviar Conformidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Datos de ejemplo -->
-                        <tr>
-                          <td>2024-08-10</td>
-                          <td>Juan Perez</td>
-                          <td>25%</td>
-                          <td>4.20</td>
-                          <td><a href="conformidad.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
-                          <td><button class="btn btn-info" disabled>Enviada</button></td>
-                        </tr>
-                        <tr>
-                          <td>2024-08-17</td>
-                          <td>Juan Perez</td>
-                          <td>50%</td>
-                          <td>3.67</td>
-                          <td><a href="conformidad.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
-                          <td><button class="btn btn-info">Enviar Conformidad</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        
-            <!-- Modal para Generar Conformidad -->
-            <div class="modal fade" id="modalGenerarConformidad" tabindex="-1" aria-labelledby="modalGenerarConformidadLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalGenerarConformidadLabel">Generar Conformidad</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="formGenerarConformidad">
-                                <div class="mb-3">
-                                    <label for="tipoConformidad" class="form-label">Tipo de Conformidad</label>
-                                    <select id="tipoConformidad" class="form-select" required>
-                                        <option value="total">Total</option>
-                                        <option value="parcial">Parcial</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3" id="campoPorcentaje" style="display: none;">
-                                    <label for="porcentajeConformidad" class="form-label">Porcentaje de Conformidad</label>
-                                    <input type="number" id="porcentajeConformidad" class="form-control" step="0.0001" min="0" max="100">
-                                </div>
-                                <div class="mb-3" id="campoPorcentajeRestante" style="display: none;">
-                                    <label for="porcentajeRestante" class="form-label">Porcentaje Restante</label>
-                                    <input type="text" id="porcentajeRestante" class="form-control" readonly>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="observaciones" class="form-label">Observaciones</label>
-                                    <textarea id="observaciones" class="form-control" rows="3"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="calidad" class="form-label">Calidad</label>
-                                    <select id="calidad" class="form-select" required>
-                                        <option value="1">1 Deficiente</option>
-                                        <option value="2">2 Regular</option>
-                                        <option value="3">3 Aceptable</option>
-                                        <option value="4">4 Satisfactorio</option>
-                                        <option value="5">5 Muy Satisfactorio</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="puntualidad" class="form-label">Puntualidad</label>
-                                    <select id="puntualidad" class="form-select" required>
-                                        <option value="1">1 Deficiente</option>
-                                        <option value="2">2 Regular</option>
-                                        <option value="3">3 Aceptable</option>
-                                        <option value="4">4 Satisfactorio</option>
-                                        <option value="5">5 Muy Satisfactorio</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="compromiso" class="form-label">Compromiso</label>
-                                    <select id="compromiso" class="form-select" required>
-                                        <option value="1">1 Deficiente</option>
-                                        <option value="2">2 Regular</option>
-                                        <option value="3">3 Aceptable</option>
-                                        <option value="4">4 Satisfactorio</option>
-                                        <option value="5">5 Muy Satisfactorio</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-blue" id="btnGenerarConformidad">Generar Conformidad</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <script>
-                document.getElementById('tipoConformidad').addEventListener('change', function() {
-                    const tipo = this.value;
-                    const campoPorcentaje = document.getElementById('campoPorcentaje');
-                    const campoPorcentajeRestante = document.getElementById('campoPorcentajeRestante');
-                    const porcentajeConformidad = document.getElementById('porcentajeConformidad');
-                    const porcentajeRestante = document.getElementById('porcentajeRestante');
-        
-                    if (tipo === 'parcial') {
-                        campoPorcentaje.style.display = 'block';
-                        porcentajeConformidad.removeAttribute('readonly');
-                        const porcentaje = parseFloat(porcentajeConformidad.value) || 0;
-                        porcentajeRestante.value = (100 - porcentaje).toFixed(4) + '%';
-                        campoPorcentajeRestante.style.display = 'block';
-                    } else {
-                        campoPorcentaje.style.display = 'none';
-                        porcentajeConformidad.setAttribute('readonly', true);
-                        porcentajeRestante.style.display = 'none';
-                        porcentajeRestante.value = '100%';
-                    }
-                });
-        
-                document.getElementById('btnGenerarConformidad').addEventListener('click', function() {
-                    const tipo = document.getElementById('tipoConformidad').value;
-                    const calidad = parseInt(document.getElementById('calidad').value);
-                    const puntualidad = parseInt(document.getElementById('puntualidad').value);
-                    const compromiso = parseInt(document.getElementById('compromiso').value);
-                    const promedio = ((calidad + puntualidad + compromiso) / 3).toFixed(2);
-        
-                    // Aquí se debe implementar la lógica para generar el PDF y almacenar la conformidad
-        
-                    alert('Conformidad generada con éxito. Promedio: ' + promedio);
-                });
-            </script>
-        </body>
-
-          <!-- DOCUMENTOS TRIBUTARIOS -->
-
-          <body>
-            <div class="container mt-4">
-                <!-- Título de la sección -->
-                <h3>Documentos Tributarios</h3>
-        
-                <!-- Tabla de Documentos Tributarios con contenedor responsive -->
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Tipo de Documento</th>
-                                <th>Nro de Documento</th>
-                                <th>Ver PDF</th>
-                                <th>Fecha de Envío</th>
-                                <th>Fecha de Registro</th>
-                                <th>Fecha de Contabilización</th>
-                                <th>Mesa de Partes</th>
-                                <th>Contabilidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Datos de ejemplo -->
-                            <tr>
-                                <td>Factura</td>
-                                <td>12345</td>
-                                <td><a href="documento1.pdf" class="btn btn-blue" target="_blank">Ver PDF</a></td>
-                                <td>2024-08-16</td>
-                                <td>2024-08-17</td>
-                                <td>2024-08-18</td>
-                                <td>
-                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalAprobarMesaPartes">Aprobado</button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalRechazarMesaPartes">Rechazado</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalAprobarContabilidad">Aprobado</button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalRechazarContabilidad">Rechazado</button>
-                                </td>
-                            </tr>
-                            <!-- Más filas según sea necesario -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-            <!-- Modal para Rechazo de Mesa de Partes -->
-            <div class="modal fade" id="modalRechazarMesaPartes" tabindex="-1" aria-labelledby="modalRechazarMesaPartesLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalRechazarMesaPartesLabel">Rechazar Documento - Mesa de Partes</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="formRechazarMesaPartes">
-                                <div class="mb-3">
-                                    <label for="emailProveedorMesaPartes" class="form-label">Correo Electrónico del Proveedor</label>
-                                    <input type="email" id="emailProveedorMesaPartes" class="form-control" readonly>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="motivoRechazoMesaPartes" class="form-label">Motivo del Rechazo</label>
-                                    <textarea id="motivoRechazoMesaPartes" class="form-control" rows="3" required></textarea>
-                                </div>
-                                <p class="text-danger">Por favor modificar el documento o volverlo a emitir con la anulación correspondiente y enviar la información nuevamente. Gracias.</p>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-danger" id="btnRechazarMesaPartes">Rechazar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Modal para Aprobación de Mesa de Partes -->
-            <div class="modal fade" id="modalAprobarMesaPartes" tabindex="-1" aria-labelledby="modalAprobarMesaPartesLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalAprobarMesaPartesLabel">Aprobar Documento - Mesa de Partes</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>La factura ha sido recibida por mesa de partes correctamente.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Modal para Rechazo de Contabilidad -->
-            <div class="modal fade" id="modalRechazarContabilidad" tabindex="-1" aria-labelledby="modalRechazarContabilidadLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalRechazarContabilidadLabel">Rechazar Documento - Contabilidad</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="formRechazarContabilidad">
-                                <div class="mb-3">
-                                    <label for="emailProveedorContabilidad" class="form-label">Correo Electrónico del Proveedor</label>
-                                    <input type="email" id="emailProveedorContabilidad" class="form-control" readonly>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="motivoRechazoContabilidad" class="form-label">Motivo del Rechazo</label>
-                                    <textarea id="motivoRechazoContabilidad" class="form-control" rows="3" required></textarea>
-                                </div>
-                                <p class="text-danger">Por favor modificar el documento o volverlo a emitir con la anulación correspondiente y enviar la información nuevamente. Gracias.</p>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-danger" id="btnRechazarContabilidad">Rechazar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Modal para Aprobación de Contabilidad -->
-            <div class="modal fade" id="modalAprobarContabilidad" tabindex="-1" aria-labelledby="modalAprobarContabilidadLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalAprobarContabilidadLabel">Aprobar Documento - Contabilidad</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>La factura ha sido registrada correctamente por el área contable.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <script>
-                // Funciones para manejar los modales y envíos de notificaciones
-                document.querySelectorAll('.btn-success').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const emailInput = this.closest('tr').querySelector('td:nth-child(3) a').href;
-                        const modalId = this.getAttribute('data-bs-target');
-                        document.querySelector(`${modalId} #emailProveedor${modalId === '#modalRechazarMesaPartes' ? 'MesaPartes' : 'Contabilidad'}`).value = emailInput;
-                    });
-                });
-        
-                document.querySelectorAll('.btn-danger').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const emailInput = this.closest('tr').querySelector('td:nth-child(3) a').href;
-                        const modalId = this.getAttribute('data-bs-target');
-                        document.querySelector(`${modalId} #emailProveedor${modalId === '#modalRechazarMesaPartes' ? 'MesaPartes' : 'Contabilidad'}`).value = emailInput;
-                    });
-                });
-            </script>
-        </body>
-
-          <!-- PAGOS -->
-
-          <body>
-            <div class="container mt-4">
-                <!-- Título de la sección -->
-                <h3>Pagos</h3>
-        
-                <!-- Botón para Registrar Pagos -->
-                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalRegistrarPago">Registrar Pagos</button>
-        
-                <!-- Tabla de Pagos con contenedor responsive -->
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Fecha de Abono</th>
-                                <th>Monto Abonado</th>
-                                <th>Constancia</th>
-                                <th>Gestionar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Datos de ejemplo -->
-                            <tr>
-                                <td>2024-08-16</td>
-                                <td>S/ 500.00</td>
-                                <td><a href="constancia1.pdf" class="btn btn-blue" target="_blank">Ver Archivo</a></td>
-                                <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalRegistrarPago" data-fecha="2024-08-16" data-monto="500.00" data-archivo="constancia1.pdf">Editar</button></td>
-                            </tr>
-                            <!-- Más filas según sea necesario -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-            <!-- Modal para Registrar Pagos -->
-            <div class="modal fade" id="modalRegistrarPago" tabindex="-1" aria-labelledby="modalRegistrarPagoLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalRegistrarPagoLabel">Registrar Pago</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="formRegistrarPago" enctype="multipart/form-data">
-                                <div class="mb-3">
-                                    <label for="fechaAbono" class="form-label">Fecha de Abono</label>
-                                    <input type="date" id="fechaAbono" name="fechaAbono" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="montoAbonado" class="form-label">Monto Abonado</label>
-                                    <input type="number" id="montoAbonado" name="montoAbonado" class="form-control" step="0.01" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="constanciaAbono" class="form-label">Constancia de Abono</label>
-                                    <input type="file" id="constanciaAbono" name="constanciaAbono" class="form-control" accept=".pdf, .jpg, .jpeg, .png" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-blue" id="btnRegistrarPago">Registrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const modalRegistrarPago = document.getElementById('modalRegistrarPago');
-                    modalRegistrarPago.addEventListener('show.bs.modal', function (event) {
-                        const button = event.relatedTarget; // Botón que activó el modal
-                        const modalTitle = modalRegistrarPago.querySelector('.modal-title');
-                        const form = modalRegistrarPago.querySelector('form');
-                        const fechaInput = form.querySelector('#fechaAbono');
-                        const montoInput = form.querySelector('#montoAbonado');
-                        const archivoInput = form.querySelector('#constanciaAbono');
-        
-                        if (button) {
-                            const fecha = button.getAttribute('data-fecha');
-                            const monto = button.getAttribute('data-monto');
-                            const archivo = button.getAttribute('data-archivo');
-        
-                            if (fecha) fechaInput.value = fecha;
-                            if (monto) montoInput.value = monto;
-                            if (archivo) archivoInput.value = archivo;
-                        } else {
-                            // Limpiar los campos cuando se abre el modal sin datos previos
-                            fechaInput.value = '';
-                            montoInput.value = '';
-                            archivoInput.value = '';
-                        }
-                    });
-        
-                    document.getElementById('btnRegistrarPago').addEventListener('click', () => {
-                        // Aquí puedes añadir la lógica para registrar el pago, por ejemplo, haciendo una solicitud AJAX
-                        alert('Pago registrado');
-                        const modalRegistrarPago = bootstrap.Modal.getInstance(document.getElementById('modalRegistrarPago'));
-                        modalRegistrarPago.hide();
-                    });
-                });
-            </script>
-        </body>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-          <!---FIN DE EXPEDIENTE-->
-  </main>
-  <div class="fixed-plugin">
-    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-      <i class="fa fa-cog py-2"> </i>
-    </a>
-    <div class="card shadow-lg">
-      <div class="card-header pb-0 pt-3 ">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Argon Configurator</h5>
-          <p>See our dashboard options.</p>
+              <div class="mb-3">
+                <label for="numeroPedido" class="form-label">Número de Pedido</label>
+                <input type="text" class="form-control" id="numeroPedido" required>
+              </div>
+              <div class="mb-3">
+                <label for="descripcionPedido" class="form-label">Descripción/Observaciones</label>
+                <textarea class="form-control" id="descripcionPedido" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="archivoPDF" class="form-label">Subir Archivo PDF</label>
+                <input type="file" class="form-control" id="archivoPDF" accept=".pdf" required>
+              </div>
+              <button type="button" class="btn btn-custom" id="guardarSolicitud">Guardar Solicitud</button>
+            </form>
+          </div>
         </div>
-        <div class="float-end mt-4">
-          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="fa fa-close"></i>
-          </button>
-        </div>
-        <!-- End Toggle Button -->
       </div>
-      <hr class="horizontal dark my-1">
-      <div class="card-body pt-sm-3 pt-0 overflow-auto">
-        <!-- Sidebar Backgrounds -->
-        <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
+    </div>
+
+     <!-- Modal para Solicitar Cotización -->
+     <div class="modal fade" id="modalCotizacion" tabindex="-1" aria-labelledby="modalCotizacionLabel"
+     aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="modalCotizacionLabel">Solicitar Cotización</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+           <form id="formCotizacion">
+             <div class="mb-3">
+               <label for="emailProveedores" class="form-label">Correo Electrónico de Proveedores</label>
+               <textarea class="form-control" id="emailProveedores" rows="3"
+                 placeholder="Ingrese los correos electrónicos separados por coma" required></textarea>
+             </div>
+             <button type="button" class="btn btn-manage" id="enviarCotizacion">Enviar Solicitud</button>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+
+    <!-- Modal para Subir Cotización -->
+    <div class="modal fade" id="modalSubirCotizacion" tabindex="-1" aria-labelledby="modalSubirCotizacionLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSubirCotizacionLabel">Subir Cotización</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <a href="javascript:void(0)" class="switch-trigger background-color">
-          <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary active" data-color="primary"
-              onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
-          </div>
-        </a>
-        <!-- Sidenav Type -->
-        <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
+        <div class="modal-body">
+          <form id="formSubirCotizacion">
+            <div class="form-group">
+              <label for="nombreProveedor">Nombre del Proveedor</label>
+              <input type="text" class="form-control" id="nombreProveedor" placeholder="Nombre del proveedor"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="rucProveedor">RUC del Proveedor</label>
+              <input type="text" class="form-control" id="rucProveedor" placeholder="RUC del proveedor" required>
+            </div>
+            <div class="form-group">
+              <label for="montoCotizacion">Monto de la Cotización</label>
+              <input type="text" class="form-control" id="montoCotizacion" placeholder="Monto de la cotización"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="informacionTecnica">Enlace Información Técnica</label>
+              <input type="text" class="form-control" id="informacionTecnica" placeholder="Enlace o archivo zip">
+            </div>
+            <div class="form-group">
+              <label for="propuestaPDF">Propuesta en PDF</label>
+              <input type="file" class="form-control-file" id="propuestaPDF" required>
+            </div>
+          </form>
         </div>
-        <div class="d-flex">
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white"
-            onclick="sidebarType(this)">White</button>
-          <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default"
-            onclick="sidebarType(this)">Dark</button>
-        </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
-        <!-- Navbar Fixed -->
-        <div class="d-flex my-3">
-          <h6 class="mb-0">Navbar Fixed</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-sm-4">
-        <div class="mt-2 mb-5 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
-          </div>
-        </div>
-        <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free
-          Download</a>
-        <a class="btn btn-outline-dark w-100"
-          href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
-        <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard"
-            data-icon="octicon-star" data-size="large" data-show-count="true"
-            aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard"
-            class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard"
-            class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-blue" id="btnSubirCotizacion">Subir Cotización</button>
         </div>
       </div>
     </div>
   </div>
-  <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+
+
+    <!-- Modal para Orden con Cotización -->
+    <div class="modal fade" id="modalOrdenConCotizacion" tabindex="-1"
+    aria-labelledby="modalOrdenConCotizacionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalOrdenConCotizacionLabel">Orden con Cotización</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="tipoOrden" class="form-label">Tipo de Orden</label>
+              <select id="tipoOrden" class="form-select">
+                <option value="compra">Compra</option>
+                <option value="servicio">Servicio</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pdfOrden" class="form-label">Archivo PDF de la Orden</label>
+              <input type="file" id="pdfOrden" class="form-control" accept=".pdf">
+            </div>
+            <div class="mb-3">
+              <label for="detallesOrden" class="form-label">Detalles Adicionales</label>
+              <textarea id="detallesOrden" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="condicionPago" class="form-label">Condición de Pago</label>
+              <input type="text" id="condicionPago" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="fechaAtencion" class="form-label">Fecha de Atención Deseada</label>
+              <input type="date" id="fechaAtencion" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="correoProveedor" class="form-label">Correo del Proveedor</label>
+              <input type="email" id="correoProveedor" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="nombreSolicitante" class="form-label">Nombre del Solicitante</label>
+              <input type="text" id="nombreSolicitante" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="correoSolicitante" class="form-label">Correo del Solicitante</label>
+              <input type="email" id="correoSolicitante" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="correosNotificar" class="form-label">Correos para Notificar</label>
+              <input type="text" id="correosNotificar" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-blue">Enviar Orden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Cargar Orden -->
+  <div class="modal fade" id="modalCargarOrden" tabindex="-1" aria-labelledby="modalCargarOrdenLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCargarOrdenLabel">Cargar Orden</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="tipoPedido" class="form-label">Tipo de Pedido</label>
+              <select id="tipoPedido" class="form-select">
+                <option value="compra">Compra</option>
+                <option value="servicio">Servicio</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="numeroPedido" class="form-label">Número de Pedido</label>
+              <input type="text" id="numeroPedido" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="areaUsuaria" class="form-label">Área Usuaria</label>
+              <input type="text" id="areaUsuaria" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="usuarioSolicitante" class="form-label">Nombre del Usuario Solicitante</label>
+              <input type="text" id="usuarioSolicitante" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="nombreProveedor" class="form-label">Nombre del Proveedor</label>
+              <input type="text" id="nombreProveedor" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="rucProveedor" class="form-label">RUC del Proveedor</label>
+              <input type="text" id="rucProveedor" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="montoCotizacion" class="form-label">Monto de la Cotización</label>
+              <input type="text" id="montoCotizacion" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="archivoZip" class="form-label">Archivo ZIP de la Propuesta Técnica</label>
+              <input type="file" id="archivoZip" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="pdfPropuesta" class="form-label">Cotización en PDF</label>
+              <input type="file" id="pdfPropuesta" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="pdfOrden" class="form-label">Cargar la Orden de Compra</label>
+              <input type="file" id="pdfOrden" class="form-control" accept=".pdf">
+            </div>
+
+            <div class="mb-3">
+              <label for="detallesOrden" class="form-label">Detalles Adicionales</label>
+              <textarea id="detallesOrden" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="condicionPago" class="form-label">Condición de Pago</label>
+              <input type="text" id="condicionPago" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="fechaAtencion" class="form-label">Fecha de Atención Deseada</label>
+              <input type="date" id="fechaAtencion" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="correoProveedor" class="form-label">Correo del Proveedor</label>
+              <input type="email" id="correoProveedor" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="correosNotificar" class="form-label">Correos para Notificar</label>
+              <input type="text" id="correosNotificar" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-blue">Enviar Orden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+   <!-- Modal para Generar Conformidad -->
+   <div class="modal fade" id="modalGenerarConformidad" tabindex="-1"
+   aria-labelledby="modalGenerarConformidadLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="modalGenerarConformidadLabel">Generar Conformidad</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <form id="formGenerarConformidad">
+           <div class="mb-3">
+             <label for="tipoConformidad" class="form-label">Tipo de Conformidad</label>
+             <select id="tipoConformidad" class="form-select" required>
+               <option value="total">Total</option>
+               <option value="parcial">Parcial</option>
+             </select>
+           </div>
+           <div class="mb-3" id="campoPorcentaje" style="display: none;">
+             <label for="porcentajeConformidad" class="form-label">Porcentaje de Conformidad</label>
+             <input type="number" id="porcentajeConformidad" class="form-control" step="0.0001" min="0"
+               max="100">
+           </div>
+           <div class="mb-3" id="campoPorcentajeRestante" style="display: none;">
+             <label for="porcentajeRestante" class="form-label">Porcentaje Restante</label>
+             <input type="text" id="porcentajeRestante" class="form-control" readonly>
+           </div>
+           <div class="mb-3">
+             <label for="observaciones" class="form-label">Observaciones</label>
+             <textarea id="observaciones" class="form-control" rows="3"></textarea>
+           </div>
+           <div class="mb-3">
+             <label for="calidad" class="form-label">Calidad</label>
+             <select id="calidad" class="form-select" required>
+               <option value="1">1 Deficiente</option>
+               <option value="2">2 Regular</option>
+               <option value="3">3 Aceptable</option>
+               <option value="4">4 Satisfactorio</option>
+               <option value="5">5 Muy Satisfactorio</option>
+             </select>
+           </div>
+           <div class="mb-3">
+             <label for="puntualidad" class="form-label">Puntualidad</label>
+             <select id="puntualidad" class="form-select" required>
+               <option value="1">1 Deficiente</option>
+               <option value="2">2 Regular</option>
+               <option value="3">3 Aceptable</option>
+               <option value="4">4 Satisfactorio</option>
+               <option value="5">5 Muy Satisfactorio</option>
+             </select>
+           </div>
+           <div class="mb-3">
+             <label for="compromiso" class="form-label">Compromiso</label>
+             <select id="compromiso" class="form-select" required>
+               <option value="1">1 Deficiente</option>
+               <option value="2">2 Regular</option>
+               <option value="3">3 Aceptable</option>
+               <option value="4">4 Satisfactorio</option>
+               <option value="5">5 Muy Satisfactorio</option>
+             </select>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+         <button type="button" class="btn btn-blue" id="btnGenerarConformidad">Generar Conformidad</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+ <!-- Modal para Rechazo de Mesa de Partes -->
+ <div class="modal fade" id="modalRechazarMesaPartes" tabindex="-1" aria-labelledby="modalRechazarMesaPartesLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modalRechazarMesaPartesLabel">Rechazar Documento - Mesa de Partes</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+       <form id="formRechazarMesaPartes">
+         <div class="mb-3">
+           <label for="emailProveedorMesaPartes" class="form-label">Correo Electrónico del Proveedor</label>
+           <input type="email" id="emailProveedorMesaPartes" class="form-control" readonly>
+         </div>
+         <div class="mb-3">
+           <label for="motivoRechazoMesaPartes" class="form-label">Motivo del Rechazo</label>
+           <textarea id="motivoRechazoMesaPartes" class="form-control" rows="3" required></textarea>
+         </div>
+         <p class="text-danger">Por favor modificar el documento o volverlo a emitir con la anulación correspondiente
+           y enviar la información nuevamente. Gracias.</p>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+       <button type="button" class="btn btn-danger" id="btnRechazarMesaPartes">Rechazar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Modal para Aprobación de Mesa de Partes -->
+<div class="modal fade" id="modalAprobarMesaPartes" tabindex="-1" aria-labelledby="modalAprobarMesaPartesLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modalAprobarMesaPartesLabel">Aprobar Documento - Mesa de Partes</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+       <p>La factura ha sido recibida por mesa de partes correctamente.</p>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Modal para Rechazo de Contabilidad -->
+<div class="modal fade" id="modalRechazarContabilidad" tabindex="-1" aria-labelledby="modalRechazarContabilidadLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modalRechazarContabilidadLabel">Rechazar Documento - Contabilidad</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+       <form id="formRechazarContabilidad">
+         <div class="mb-3">
+           <label for="emailProveedorContabilidad" class="form-label">Correo Electrónico del Proveedor</label>
+           <input type="email" id="emailProveedorContabilidad" class="form-control" readonly>
+         </div>
+         <div class="mb-3">
+           <label for="motivoRechazoContabilidad" class="form-label">Motivo del Rechazo</label>
+           <textarea id="motivoRechazoContabilidad" class="form-control" rows="3" required></textarea>
+         </div>
+         <p class="text-danger">Por favor modificar el documento o volverlo a emitir con la anulación correspondiente
+           y enviar la información nuevamente. Gracias.</p>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+       <button type="button" class="btn btn-danger" id="btnRechazarContabilidad">Rechazar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Modal para Aprobación de Contabilidad -->
+<div class="modal fade" id="modalAprobarContabilidad" tabindex="-1" aria-labelledby="modalAprobarContabilidadLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="modalAprobarContabilidadLabel">Aprobar Documento - Contabilidad</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+       <p>La factura ha sido registrada correctamente por el área contable.</p>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+  <!-- Modal para Registrar Pagos -->
+  <div class="modal fade" id="modalRegistrarPago" tabindex="-1" aria-labelledby="modalRegistrarPagoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegistrarPagoLabel">Registrar Pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formRegistrarPago" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="fechaAbono" class="form-label">Fecha de Abono</label>
+              <input type="date" id="fechaAbono" name="fechaAbono" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="montoAbonado" class="form-label">Monto Abonado</label>
+              <input type="number" id="montoAbonado" name="montoAbonado" class="form-control" step="0.01" required>
+            </div>
+            <div class="mb-3">
+              <label for="constanciaAbono" class="form-label">Constancia de Abono</label>
+              <input type="file" id="constanciaAbono" name="constanciaAbono" class="form-control"
+                accept=".pdf, .jpg, .jpeg, .png" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-blue" id="btnRegistrarPago">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<!---FIN DE EXPEDIENTE-->
+</main>
+<div class="fixed-plugin">
+  <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+    <i class="fa fa-cog py-2"> </i>
+  </a>
+  <div class="card shadow-lg">
+    <div class="card-header pb-0 pt-3 ">
+      <div class="float-start">
+        <h5 class="mt-3 mb-0">Argon Configurator</h5>
+        <p>See our dashboard options.</p>
+      </div>
+      <div class="float-end mt-4">
+        <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
+      <!-- End Toggle Button -->
+    </div>
+    <hr class="horizontal dark my-1">
+    <div class="card-body pt-sm-3 pt-0 overflow-auto">
+      <!-- Sidebar Backgrounds -->
+      <div>
+        <h6 class="mb-0">Sidebar Colors</h6>
+      </div>
+      <a href="javascript:void(0)" class="switch-trigger background-color">
+        <div class="badge-colors my-2 text-start">
+          <span class="badge filter bg-gradient-primary active" data-color="primary"
+            onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+        </div>
+      </a>
+      <!-- Sidenav Type -->
+      <div class="mt-3">
+        <h6 class="mb-0">Sidenav Type</h6>
+        <p class="text-sm">Choose between 2 different sidenav types.</p>
+      </div>
+      <div class="d-flex">
+        <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white"
+          onclick="sidebarType(this)">White</button>
+        <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default"
+          onclick="sidebarType(this)">Dark</button>
+      </div>
+      <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+      <!-- Navbar Fixed -->
+      <div class="d-flex my-3">
+        <h6 class="mb-0">Navbar Fixed</h6>
+        <div class="form-check form-switch ps-0 ms-auto my-auto">
+          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+        </div>
+      </div>
+      <hr class="horizontal dark my-sm-4">
+      <div class="mt-2 mb-5 d-flex">
+        <h6 class="mb-0">Light / Dark</h6>
+        <div class="form-check form-switch ps-0 ms-auto my-auto">
+          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+        </div>
+      </div>
+      <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free
+        Download</a>
+      <a class="btn btn-outline-dark w-100"
+        href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
+      <div class="w-100 text-center">
+        <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star"
+          data-size="large" data-show-count="true"
+          aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
+        <h6 class="mt-3">Thank you for sharing!</h6>
+        <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard"
+          class="btn btn-dark mb-0 me-2" target="_blank">
+          <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard"
+          class="btn btn-dark mb-0 me-2" target="_blank">
+          <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script>
+  var win = navigator.platform.indexOf('Win') > -1;
+  if (win && document.querySelector('#sidenav-scrollbar')) {
+    var options = {
+      damping: '0.5'
     }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+  }
+</script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+
+<script>
+  $(document).ready(function () {
+    // Manejo del formulario de solicitud
+    $('#guardarSolicitud').click(function () {
+      var tipoPedido = $('#tipoPedido').val();
+      var numeroPedido = $('#numeroPedido').val();
+      var descripcionPedido = $('#descripcionPedido').val();
+      var archivoPDF = $('#archivoPDF').val().split('\\').pop();
+
+      // Validar campos antes de agregar la solicitud
+      if (tipoPedido && numeroPedido && descripcionPedido && archivoPDF) {
+        var fechaPedido = new Date().toLocaleDateString();
+        var usuario = "Nombre Usuario"; // Cambia esto por el nombre del usuario actual
+        var areaUsuaria = "Área Usuaria"; // Cambia esto por el área usuaria actual
+
+        $('#tablaSolicitudes').append(
+          `<tr>
+                <td>${fechaPedido}</td>
+                <td>${areaUsuaria}</td>
+                <td>${usuario}</td>
+                <td>${tipoPedido}</td>
+                <td>${numeroPedido}</td>
+                <td>${descripcionPedido}</td>
+                <td><a href="path/to/${archivoPDF}" class="pdf-link" target="_blank">Ver</a></td>
+            </tr>`
+        );
+
+        // Cerrar el modal y resetear el formulario
+        $('#modalSolicitud').modal('hide');
+        $('#formSolicitud')[0].reset();
+      }
+    });
+
+    // Manejo del formulario de cotización
+    $('#enviarCotizacion').click(function () {
+      var emails = $('#emailProveedores').val().split(',');
+
+      // Validar correos electrónicos
+      if (emails.length > 0) {
+        alert(`Correos electrónicos enviados a: ${emails.join(', ')}`);
+
+        // Cerrar el modal y resetear el formulario
+        $('#modalCotizacion').modal('hide');
+        $('#formCotizacion')[0].reset();
+      }
+    });
+  });
+</script>
+
+<script>
+  document.getElementById('btnSubirCotizacion').addEventListener('click', function () {
+    // Obtener datos del formulario
+    var nombreProveedor = document.getElementById('nombreProveedor').value;
+    var rucProveedor = document.getElementById('rucProveedor').value;
+    var montoCotizacion = document.getElementById('montoCotizacion').value;
+    var informacionTecnica = document.getElementById('informacionTecnica').value;
+    var propuestaPDF = document.getElementById('propuestaPDF').files[0];
+
+    // Validar campos obligatorios
+    if (!nombreProveedor || !rucProveedor || !montoCotizacion || !propuestaPDF) {
+      alert('Por favor, complete todos los campos obligatorios.');
+      return;
+    }
+
+    // Crear una nueva fila en la tabla
+    var tableBody = document.getElementById('cotizacionTableBody');
+    var newRow = document.createElement('tr');
+
+    var currentDate = new Date().toISOString().split('T')[0]; // Fecha en formato YYYY-MM-DD
+
+    newRow.innerHTML = `
+                <td>${currentDate}</td>
+                <td>${nombreProveedor}</td>
+                <td>${rucProveedor}</td>
+                <td>S/. ${montoCotizacion}</td>
+                <td><a href="${informacionTecnica}" target="_blank">Ver Enlace</a></td>
+                <td><a href="#" target="_blank">Ver PDF</a></td>
+                <td><button class="btn btn-blue">Seleccionar</button></td>
+            `;
+
+    tableBody.appendChild(newRow);
+
+    // Cerrar el modal y limpiar el formulario
+    var modal = bootstrap.Modal.getInstance(document.getElementById('modalSubirCotizacion'));
+    modal.hide();
+    document.getElementById('formSubirCotizacion').reset();
+  });
+</script>
+
+<script>
+  document.getElementById('tipoConformidad').addEventListener('change', function () {
+    const tipo = this.value;
+    const campoPorcentaje = document.getElementById('campoPorcentaje');
+    const campoPorcentajeRestante = document.getElementById('campoPorcentajeRestante');
+    const porcentajeConformidad = document.getElementById('porcentajeConformidad');
+    const porcentajeRestante = document.getElementById('porcentajeRestante');
+
+    if (tipo === 'parcial') {
+      campoPorcentaje.style.display = 'block';
+      porcentajeConformidad.removeAttribute('readonly');
+      const porcentaje = parseFloat(porcentajeConformidad.value) || 0;
+      porcentajeRestante.value = (100 - porcentaje).toFixed(4) + '%';
+      campoPorcentajeRestante.style.display = 'block';
+    } else {
+      campoPorcentaje.style.display = 'none';
+      porcentajeConformidad.setAttribute('readonly', true);
+      porcentajeRestante.style.display = 'none';
+      porcentajeRestante.value = '100%';
+    }
+  });
+
+  document.getElementById('btnGenerarConformidad').addEventListener('click', function () {
+    const tipo = document.getElementById('tipoConformidad').value;
+    const calidad = parseInt(document.getElementById('calidad').value);
+    const puntualidad = parseInt(document.getElementById('puntualidad').value);
+    const compromiso = parseInt(document.getElementById('compromiso').value);
+    const promedio = ((calidad + puntualidad + compromiso) / 3).toFixed(2);
+
+    // Aquí se debe implementar la lógica para generar el PDF y almacenar la conformidad
+
+    alert('Conformidad generada con éxito. Promedio: ' + promedio);
+  });
+</script>
+
+
+
+<script>
+  // Funciones para manejar los modales y envíos de notificaciones
+  document.querySelectorAll('.btn-success').forEach(button => {
+    button.addEventListener('click', function () {
+      const emailInput = this.closest('tr').querySelector('td:nth-child(3) a').href;
+      const modalId = this.getAttribute('data-bs-target');
+      document.querySelector(`${modalId} #emailProveedor${modalId === '#modalRechazarMesaPartes' ? 'MesaPartes' : 'Contabilidad'}`).value = emailInput;
+    });
+  });
+
+  document.querySelectorAll('.btn-danger').forEach(button => {
+    button.addEventListener('click', function () {
+      const emailInput = this.closest('tr').querySelector('td:nth-child(3) a').href;
+      const modalId = this.getAttribute('data-bs-target');
+      document.querySelector(`${modalId} #emailProveedor${modalId === '#modalRechazarMesaPartes' ? 'MesaPartes' : 'Contabilidad'}`).value = emailInput;
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalRegistrarPago = document.getElementById('modalRegistrarPago');
+    modalRegistrarPago.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget; // Botón que activó el modal
+      const modalTitle = modalRegistrarPago.querySelector('.modal-title');
+      const form = modalRegistrarPago.querySelector('form');
+      const fechaInput = form.querySelector('#fechaAbono');
+      const montoInput = form.querySelector('#montoAbonado');
+      const archivoInput = form.querySelector('#constanciaAbono');
+
+      if (button) {
+        const fecha = button.getAttribute('data-fecha');
+        const monto = button.getAttribute('data-monto');
+        const archivo = button.getAttribute('data-archivo');
+
+        if (fecha) fechaInput.value = fecha;
+        if (monto) montoInput.value = monto;
+        if (archivo) archivoInput.value = archivo;
+      } else {
+        // Limpiar los campos cuando se abre el modal sin datos previos
+        fechaInput.value = '';
+        montoInput.value = '';
+        archivoInput.value = '';
+      }
+    });
+
+    document.getElementById('btnRegistrarPago').addEventListener('click', () => {
+      // Aquí puedes añadir la lógica para registrar el pago, por ejemplo, haciendo una solicitud AJAX
+      alert('Pago registrado');
+      const modalRegistrarPago = bootstrap.Modal.getInstance(document.getElementById('modalRegistrarPago'));
+      modalRegistrarPago.hide();
+    });
+  });
+</script>
+
+
+
 </body>
 
 </html>
